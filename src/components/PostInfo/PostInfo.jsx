@@ -4,8 +4,6 @@ import { CommentList } from '../CommentList';
 export const PostInfo = ({ post }) => {
   const { title, body, user, comments } = post;
 
-  if (!user) return null;
-
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
