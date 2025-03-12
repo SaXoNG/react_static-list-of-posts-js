@@ -6,17 +6,17 @@ import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList';
 
 function getUserById(userId) {
-  const result = usersFromServer.find(user => userId === user.id);
+  const foundedUser = usersFromServer.find(user => userId === user.id);
 
-  return result || null;
+  return foundedUser || null;
 }
 
 function getCommentsById(postId) {
-  const result = commentsFromServer.filter(
+  const commentsList = commentsFromServer.filter(
     comment => comment.postId === postId,
   );
 
-  return result;
+  return commentsList;
 }
 
 const posts = postsFromServer.map(post => {
